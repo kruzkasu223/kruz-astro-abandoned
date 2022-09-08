@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <style is:global lang="scss">
+      @font-face {
+        font-family: 'Roboto Slab';
+        src: url('/fonts/RobotoSlab.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto Slab', serif;
+      }
+    </style>
+  </body>
+</html>

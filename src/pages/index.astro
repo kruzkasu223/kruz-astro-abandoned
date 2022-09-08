@@ -1,0 +1,17 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Hello from '@components/Hello.astro'
+import { name } from '@data/data'
+---
+
+<Layout title="KruZ">
+  <main>
+    <Hello /><h1>{name} here...</h1>
+  </main>
+</Layout>
+
+<style lang="scss">
+  h1 {
+    color: #de3163;
+  }
+</style>
