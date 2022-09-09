@@ -1,1 +1,95 @@
-export const name = "Kru'Z"
+export const NAME = "Kru'Z"
+export const WEBSITE = 'https://kruz.me'
+export const FULLNAME = 'Krushang Kasundra'
+
+export const PROJECTSDATA = [
+  {
+    id: 10,
+    title: "Kru'Z",
+    desc: 'Uniquely Designed Personal Portfolio Website',
+    built: 'Astro, Typescript, SCSS',
+    url: 'https://kruz.me/',
+    code: '',
+  },
+  {
+    id: 9,
+    title: 'Link Preview',
+    desc: 'Preview Your Links Here',
+    built: 'NextJS (Full Stack), TypeScript',
+    url: 'https://lp.kruz.me/',
+    code: 'https://github.com/kruzkasu223/link-preview',
+  },
+  {
+    id: 8,
+    title: 'KCHAT',
+    desc: 'Most Secure Real Time Chat Web App',
+    built: 'NextJS, Firebase, Material UI, Styled Components',
+    url: 'https://kchat.kruz.me/',
+    code: 'https://github.com/kruzkasu223/kchat',
+  },
+  {
+    id: 11,
+    title: 'Game of Life',
+    desc: "Conway's Game of Life",
+    built: 'ReactJS, TypeScript, Vite, SCSS',
+    url: 'https://gol.kruz.me/',
+    code: 'https://github.com/kruzkasu223/game-of-life',
+  },
+  {
+    id: 1,
+    title: 'Ignite Gamer',
+    desc: "A Gamer's Place",
+    built: 'ReactJS, Redux, SCSS, Parcel, Framer Motion',
+    url: 'https://ignite.kruz.me/',
+    code: 'https://github.com/kruzkasu223/ignite-gamer',
+  },
+  {
+    id: 2,
+    title: 'Waves Music Player',
+    desc: 'A Minimal Stylish Music Player',
+    built: 'ReactJS, SCSS, JavaScript',
+    url: 'https://waves.kruz.me/',
+    code: 'https://github.com/kruzkasu223/waves-music-player',
+  },
+  {
+    id: 3,
+    title: 'Kingdom Shop',
+    desc: 'An E-commerce Store',
+    built:
+      'Django, Python, HTML, CSS, JavaScript, PostgreSQL, RazorPay (Payment Integration)',
+    url: '',
+    code: 'https://github.com/kruzkasu223/kingdomshop-old',
+  },
+  {
+    id: 4,
+    title: "Kru'Z - Two",
+    desc: 'Very Well Designed and Developed Personal Portfolio Website',
+    built: 'NextJS, SCSS, Netlify Forms',
+    url: 'https://two.kruz.me/',
+    code: '',
+  },
+  {
+    id: 5,
+    title: 'Capture Portfolio',
+    desc: 'Modern Animated Portfolio Website',
+    built: 'ReactJS, Framer Motion, Styled Components',
+    url: 'https://capture.kruz.me/',
+    code: 'https://github.com/kruzkasu223/capture-portfolio',
+  },
+  {
+    id: 6,
+    title: 'Neumorphic Music Player',
+    desc: 'Music Player with Neumorphism',
+    built: 'JavaScript, HTML, CSS',
+    url: 'https://mp.kruz.me/',
+    code: 'https://github.com/kruzkasu223/music_player',
+  },
+  {
+    id: 7,
+    title: "The Kru'Z - One",
+    desc: 'Old Schooled Portfolio Website',
+    built: 'JavaScript, HTML, CSS, jQuery, Netlify Forms',
+    url: 'https://one.kruz.me/',
+    code: 'https://github.com/kruzkasu223/kruz-one',
+  },
+]

@@ -1,0 +1,42 @@
+<nav>
+  <button>Home</button>
+  <button>Skills</button>
+  <button>Projects</button>
+  <button>Contact</button>
+</nav>
+
+<style lang="scss">
+  nav {
+    padding: 20px;
+    width: 15%;
+    height: 100%;
+
+    border: 1px solid #de3163;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    padding: 1rem;
+    button {
+      all: unset;
+      margin: 1rem 0;
+      border: 1px solid #de3163;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 0;
+      line-height: 1;
+      font-size: 1rem;
+      cursor: pointer;
+      letter-spacing: 2px;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #de3163;
+      }
+    }
+  }
+</style>
