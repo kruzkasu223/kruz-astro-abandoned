@@ -1,41 +1,70 @@
+---
+export interface Props {
+  currentPage: string
+}
+
+const { currentPage } = Astro.props
+---
+
 <nav>
-  <button>Home</button>
-  <button>Skills</button>
-  <button>Projects</button>
-  <button>Contact</button>
+  <ul>
+    <a href="/">
+      <li class={currentPage === 'home' ? 'active' : ''}>Home</li>
+    </a>
+    <a href="/skills">
+      <li class={currentPage === 'skills' ? 'active' : ''}>Skills</li>
+    </a>
+    <a href="/projects">
+      <li class={currentPage === 'projects' ? 'active' : ''}>Projects</li>
+    </a>
+    <a href="/contact">
+      <li class={currentPage === 'contact' ? 'active' : ''}>Contact</li>
+    </a>
+  </ul>
 </nav>
 
 <style lang="scss">
   nav {
-    padding: 20px;
     width: 15%;
-    height: 100%;
+    height: 90%;
+    border: var(--primary-border);
+    display: grid;
+    place-items: center;
 
-    border: 1px solid #de3163;
+    ul {
+      text-align: center;
+      width: 75%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
+      a {
+        li {
+          padding: 0.375rem;
+          margin: 1.5rem 0;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 1px;
+          border: var(--primary-border);
+          cursor: pointer;
 
-    padding: 1rem;
-    button {
-      all: unset;
-      margin: 1rem 0;
-      border: 1px solid #de3163;
+          &.active {
+            background-color: var(--primary-accent-color) !important;
+          }
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.75rem 0;
-      line-height: 1;
-      font-size: 1rem;
-      cursor: pointer;
-      letter-spacing: 2px;
-      font-weight: bold;
+          background: linear-gradient(
+            to bottom,
+            var(--primary-accent-color) 0%,
+            var(--primary-accent-color) 100%
+          );
+          background-position: 0 100%;
+          background-repeat: repeat-x;
+          background-size: 0px 0px;
+          transition: background-size 0.2s;
 
-      &:hover {
-        background-color: #de3163;
+          &:hover,
+          &:focus {
+            background-size: 100% 100%;
+          }
+        }
       }
     }
   }
