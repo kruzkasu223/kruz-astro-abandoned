@@ -1,9 +1,33 @@
 ---
+import SkillsComponent from '@components/SkillsComponent.astro'
+import {
+  FRAMEWORKSANDLIBRARIES,
+  PROGRAMMINGLANGUAGES,
+  TOOLSSERVICESANDOTHERS,
+} from '@data/data'
 import Layout from '@layouts/Layout.astro'
 ---
 
-<Layout title="KruZ" currentPage="skills">
-  <main>
-    <h1>Skills</h1>
-  </main>
+<Layout title="Skills | " currentPage="skills">
+  <div>
+    <SkillsComponent
+      title="Programming Languages"
+      skills={PROGRAMMINGLANGUAGES}
+    />
+    <SkillsComponent
+      title="Frameworks and Libraries"
+      skills={FRAMEWORKSANDLIBRARIES}
+    />
+    <SkillsComponent
+      title="Tools, Services and Others"
+      skills={TOOLSSERVICESANDOTHERS}
+    />
+  </div>
 </Layout>
+
+<style lang="scss">
+  div {
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+</style>

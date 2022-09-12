@@ -1,0 +1,61 @@
+---
+export interface Props {
+  title: string
+  skills: {
+    title: string
+    img: string
+  }[]
+}
+
+const { skills, title } = Astro.props
+---
+
+<div class="skills">
+  <h2 class="skills-title">{title}</h2>
+  <div class="skills-images-container">
+    {
+      skills.map((skill) => (
+        <div class="skill">
+          <img
+            class="skill-image"
+            src={skill.img}
+            title={skill.title}
+            alt={skill.title}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style lang="scss">
+  .skills {
+    border: var(--primary-border);
+    width: 100%;
+    max-width: 62rem;
+    padding: 1rem;
+    margin: 2rem auto;
+
+    &-title {
+      margin: 0 0.5rem 1rem;
+      font-size: 1.25rem;
+    }
+
+    &-images-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .skill {
+        width: fit-content;
+        margin: 0.25rem;
+        height: 1.75rem;
+
+        &-image {
+          display: block;
+          height: 100%;
+        }
+      }
+    }
+  }
+</style>

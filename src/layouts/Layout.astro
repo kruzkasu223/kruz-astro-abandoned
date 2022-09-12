@@ -15,11 +15,11 @@ const { title, currentPage } = Astro.props
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="/favicons/favicon.ico" />
-    <title>{title}</title>
+    <title>{title}Kru'Z</title>
   </head>
   <body>
     <div class="custom-cursor"></div>
-    <img src="/images/bg.gif" class="main-bg" />
+    <img src="/images/bg.gif" class="main-background" />
     <Navbar currentPage={currentPage} />
     <main>
       <slot />
@@ -132,13 +132,13 @@ const { title, currentPage } = Astro.props
     height: 100vh;
     position: relative;
 
-    .main-bg {
+    .main-background {
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
       z-index: -1;
-      filter: brightness(0.2) blur(5px);
+      filter: brightness(0.3) blur(5px);
     }
 
     main {
