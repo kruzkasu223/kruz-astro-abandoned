@@ -3,7 +3,7 @@ import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout title="" currentPage="home">
-  <div class="main-div">
+  <section>
     <h1 class="main-title">
       Hey There 👋🏻{' '}
       <span class="main-title-1">
@@ -13,7 +13,7 @@ import Layout from '@layouts/Layout.astro'
     </h1>
 
     <div class="image-wrapper">
-      <img src="/images/hero.png" alt="Old Computer" class="hero-image" />
+      <img src="/images/hero.png" alt="Old Computer" />
     </div>
 
     <h3 class="sub-title">
@@ -24,11 +24,11 @@ import Layout from '@layouts/Layout.astro'
       <a class="button">My Skills</a>
       <a class="button">Contact Me</a>
     </div>
-  </div>
+  </section>
 </Layout>
 
 <style lang="scss">
-  .main-div {
+  section {
     display: grid;
     padding: 2rem;
     text-align: center;
@@ -63,13 +63,12 @@ import Layout from '@layouts/Layout.astro'
     }
 
     .image-wrapper {
-      border-radius: 1rem;
       overflow: hidden;
       width: 70%;
       max-width: 350px;
       margin: 0 auto;
 
-      .hero-image {
+      img {
         display: block;
         width: 100%;
       }
@@ -88,7 +87,7 @@ import Layout from '@layouts/Layout.astro'
   }
 
   @media (min-width: 1026px) {
-    .main-div {
+    section {
       text-align: left;
       display: grid;
       align-items: center;

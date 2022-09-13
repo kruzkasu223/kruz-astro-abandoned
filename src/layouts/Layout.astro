@@ -73,7 +73,7 @@ const { title, currentPage } = Astro.props
           pointer-events: none;
           transform: translate(-50%, -50%);
           mix-blend-mode: difference;
-          // transition: 0.25s;
+          display: none;
         }
       }
 
@@ -116,6 +116,7 @@ const { title, currentPage } = Astro.props
     <script is:inline defer>
       const customCursor = document.querySelector('.custom-cursor')
       document.addEventListener('mousemove', (e) => {
+        customCursor.style.display = 'block'
         customCursor.style.left = e.pageX + 'px'
         customCursor.style.top = e.pageY + 'px'
       })

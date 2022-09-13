@@ -10,48 +10,43 @@ export interface Props {
 const { skills, title } = Astro.props
 ---
 
-<div class="skills">
-  <h2 class="skills-title">{title}</h2>
-  <div class="skills-images-container">
+<section>
+  <h2>{title}</h2>
+  <div>
     {
       skills.map((skill) => (
-        <div class="skill">
-          <img
-            class="skill-image"
-            src={skill.img}
-            title={skill.title}
-            alt={skill.title}
-          />
+        <div>
+          <img src={skill.img} title={skill.title} alt={skill.title} />
         </div>
       ))
     }
   </div>
-</div>
+</section>
 
 <style lang="scss">
-  .skills {
+  section {
     border: var(--primary-border);
     width: 100%;
     max-width: 62rem;
     padding: 1rem;
     margin: 2rem auto;
 
-    &-title {
+    h2 {
       margin: 0 0.5rem 1rem;
       font-size: 1.25rem;
     }
 
-    &-images-container {
+    > div {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
 
-      .skill {
+      > div {
         width: fit-content;
         margin: 0.25rem;
         height: 1.75rem;
 
-        &-image {
+        img {
           display: block;
           height: 100%;
         }
