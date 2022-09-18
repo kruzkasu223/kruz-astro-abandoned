@@ -1,0 +1,141 @@
+---
+export interface Props {
+  project: {
+    title: string
+    description: string
+    builtUsing: string
+    url: string
+    code: string
+  }
+}
+
+const { project } = Astro.props
+---
+
+<div class="project">
+  <div class="title_wrapper">
+    <h3 class="title">{project.title}</h3>
+    <h4 class="desc">{project.description}</h4>
+  </div>
+
+  <div class="built_wrapper">
+    <p class="built_title">Built Using</p>
+    <p class="built">{project.builtUsing}</p>
+  </div>
+
+  <div class="btn_wrapper">
+    {
+      project.url !== '' ? (
+        <a target="_blank" class="button url_btn" href={project.url}>
+          Visit Website
+        </a>
+      ) : (
+        <a class="button url_btn_disabled">Visit Website</a>
+      )
+    }
+    {
+      project.code !== '' ? (
+        <a target="_blank" class="button code_btn" href={project.code}>
+          View Code
+        </a>
+      ) : (
+        <a class="button code_btn_disabled">View Code</a>
+      )
+    }
+  </div>
+</div>
+
+<style lang="scss">
+  .project {
+    border: var(--primary-border);
+    width: 100%;
+    max-width: 18rem;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .desc {
+      margin: 0.25rem 0 1rem;
+      font-weight: normal;
+      font-size: 0.9375rem;
+    }
+
+    .built_title {
+      text-decoration: underline;
+      font-size: 0.875rem;
+    }
+
+    .built {
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+    }
+
+    .url_btn,
+    .code_btn,
+    .url_btn_disabled,
+    .code_btn_disabled {
+      margin: 0.25rem 0;
+      width: 90%;
+      font-size: 0.875rem;
+      text-transform: none;
+      padding: 0.25rem 1rem;
+    }
+
+    .url_btn_disabled {
+      position: relative;
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        &:before {
+          content: 'Looks Like Website is Currently Not Online...';
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-100%);
+          padding: 0.25rem 0 1rem 0;
+          width: 100%;
+          background-color: rgba(23, 22, 22, 0.9);
+          clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 85%,
+            55% 85%,
+            50% 100%,
+            45% 85%,
+            0% 85%
+          );
+        }
+      }
+    }
+    .code_btn_disabled {
+      position: relative;
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        &:before {
+          content: 'Looks Like Code Repository is Currently Private...';
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-100%);
+          padding: 0.25rem 0 1rem 0;
+          width: 100%;
+          background-color: rgba(23, 22, 22, 0.9);
+          clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 85%,
+            55% 85%,
+            50% 100%,
+            45% 85%,
+            0% 85%
+          );
+        }
+      }
+    }
+  }
+</style>
