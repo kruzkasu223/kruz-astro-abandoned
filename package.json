@@ -14,16 +14,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "export": "rm -rf ./dist && yarn build",
+    "export": "rm -rf ./dist && pnpm build",
     "preview": "astro preview",
     "format": "prettier -c .",
     "format:fix": "prettier -w .",
     "lint:only": "eslint src",
-    "lint": "yarn format && yarn lint:only",
+    "lint": "pnpm format && pnpm lint:only",
     "prepare": "husky install"
   },
   "dependencies": {
-    "astro": "^1.1.7"
+    "@astrojs/preact": "^1.1.0",
+    "astro": "^1.1.7",
+    "preact": "^10.6.5"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",

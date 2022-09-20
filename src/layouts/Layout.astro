@@ -7,6 +7,12 @@ export interface Props {
 }
 
 const { title, currentPage } = Astro.props
+
+let clicked = false
+
+const toggleClicked = () => {
+  clicked = !clicked
+}
 ---
 
 <!DOCTYPE html>
@@ -19,8 +25,9 @@ const { title, currentPage } = Astro.props
   </head>
   <body>
     <img src="/images/bg.gif" class="main-background" />
-    <Navbar currentPage={currentPage} />
+    <Navbar currentPage={currentPage} toggleClicked={toggleClicked} />
     <main>
+      <Navbar currentPage={currentPage} isInsideMain clicked={clicked} />
       <slot />
     </main>
 
