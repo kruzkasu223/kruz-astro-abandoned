@@ -1,4 +1,4 @@
-# Don't go on my last commit, at that time I didn't knew Astro's capabilities, my current portfolio website is built using Astro
+# Don't go on my last commit, at that time I didn't knew Astro's capabilities, my current portfolio website is built using Astro (means I didn't abandoned it after all)
 
 ## Personal Portfolio Website
 
